@@ -12,7 +12,7 @@ from config import CHANNEL_ID, OWNER_ID
 from database.database import db
 
 log = logging.getLogger(__name__)
-ENABLED = os.getenv("AUTO_ARCHIVE_ENABLED", "false").lower() in ("1", "true", "yes")
+ENABLED = os.getenv("AUTO_ARCHIVE_ENABLED", "true").lower() in ("1", "true", "yes")
 SOURCE_ID = int(os.getenv("AUTO_ARCHIVE_SOURCE", "0") or 0)
 archive_records = db.database["auto_archive_records"]
 
